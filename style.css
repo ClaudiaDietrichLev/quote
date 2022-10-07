@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: cornsilk;
+    --color-header: cornflowerBlue; 
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+}
+
+/*Breakpoint - Grössere Schrift)*/
+@media screen and (min-width:768px){
+    body {
+      font-size: 18px;
+    }
+  }
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    height: 30vh;
+    padding: 0 2rem;
+    background-color: var(--color-header);
+    align-items: center;
+}
+
+h1 {
+    margin:0;
+    font-size: 2rem;
+}
+
+button {
+    all: unset;
+    padding: 2rem;
+    font-size: 1rem;
+    border: 3px solid rgb(2, 2, 74);
+    background:radial-gradient(darkblue,rgb(2, 2, 183));
+    color: white;
+    border-radius: 15px;
+    box-shadow: 1px 2px 10px black;
+    cursor:pointer;
+}
+
+button:hover {
+    box-shadow: 1px 1px 3px black;
+}
+
+
+main {
+    margin: auto;
+    min-height: 70vh;
+    padding: 3rem;
+}
+
+article {
+    padding-top: 3rem;
+}
+
+p {
+    margin: 0
+}
+
+.quote {
+    font-size: 1.5rem;
+    line-height: 150%;
+}
+
+.author {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    text-align: end;
+}
