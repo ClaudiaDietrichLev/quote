@@ -4,11 +4,11 @@ const author = document.querySelector(".author");
 
 
 btn.addEventListener("click", function () {
-    let p = fetch ("https://quote-garden.herokuapp.com/api/v3/quotes/random");
-    let p2 = p.then ((response) => {
+    fetch ("https://quote-garden.herokuapp.com/api/v3/quotes/random")
+    .then ((response) => {
         return response.json();
     })
-    p2.then((data) => {
+    .then((data) => {
         quote.innerText = data.data[0].quoteText;
         author.innerText = "- " + data.data[0].quoteAuthor;
     })
